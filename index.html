@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="" onclick="return false">
+        <p>What should be calculated?</p>
+        <input type="radio" name="calc" id="net2gross" value="add" >
+        <label for="net2gross">Add VAT (Net to gross)</label>
+        <input type="radio" name="calc" id="gross2net" value="deduct" checked>
+        <label for="gross2net">Deduct VAT (Gross to Net)</label>
+
+        <p>VAT rate</p>
+        <input type="radio" name="rate" id="nonFood" value="0.19" checked>
+        <label for="nonFood">19%</label>
+        <input type="radio" name="rate" id="food" value="0.07">
+        <label for="food">7%</label>
+
+        <p>Net amount (price without vat) in euro<span>*</span></p>
+        <input type="number">
+        <button onclick="vatCalc()">CALCULATE</button>
+    </form>
+
+    <section>
+        <h3 class="result">Result</h3>
+        <p class="result__txt">VAT amount</p>
+        <p class="result__vatAmount"></p>
+
+        <p class="result__txt">Gross amount</p>
+        <p class="result__grossAmount"></p>
+    </section>
+
+
+
+
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
+<!-- sass --watch assets/scss/style.scss assets/css/style.css -->
