@@ -11,35 +11,52 @@
 </head>
 
 <body>
+    <main>
+        <section class="calculator">
+            <h1>Value Added Tax Calculator</h1>
+            <form action="" onclick="return false">
+                <div class="container">
+                    <h2>What Should Be Calculated?</h2>
+                    <div>
+                        <input type="radio" name="calc" id="net2gross" value="add">
+                        <label for="net2gross">Add Value Added Tax (Net to gross)</label>
+                    </div>
 
+                    <div>
+                        <input type="radio" name="calc" id="gross2net" value="deduct" checked>
+                        <label for="gross2net">Deduct Value Added Tax (Gross to Net)</label>
+                    </div>
+                </div>
 
-    <form action="" onclick="return false">
-        <p>What should be calculated?</p>
-        <input type="radio" name="calc" id="net2gross" value="add" >
-        <label for="net2gross">Add VAT (Net to gross)</label>
-        <input type="radio" name="calc" id="gross2net" value="deduct" checked>
-        <label for="gross2net">Deduct VAT (Gross to Net)</label>
+                <div class="container">
+                    <h2>Value Added Tax Rate</h2>
+                    <input type="radio" name="rate" id="nonFood" value="0.19" checked>
+                    <label for="nonFood">19%</label>
+                    <input type="radio" name="rate" id="food" value="0.07">
+                    <label for="food">7%</label>
+                </div>
 
-        <p>VAT rate</p>
-        <input type="radio" name="rate" id="nonFood" value="0.19" checked>
-        <label for="nonFood">19%</label>
-        <input type="radio" name="rate" id="food" value="0.07">
-        <label for="food">7%</label>
+                <div class="container">
+                    <h2>Net Amount In Euro<span>*</span></h2>
+                    <input type="number" placeholder="Type here" required>
+                </div>
+                <button onclick="vatCalc()">CALCULATE</button>
 
-        <p>Net amount (price without vat) in euro<span>*</span></p>
-        <input type="number">
-        <button onclick="vatCalc()">CALCULATE</button>
-    </form>
+            </form>
 
-    <section>
-        <h3 class="result">Result</h3>
-        <p class="result__txt">VAT amount</p>
-        <p class="result__vatAmount"></p>
-
-        <p class="result__txt">Gross amount</p>
-        <p class="result__grossAmount"></p>
-    </section>
-
+            <section>
+                <h3 class="result">Result</h3>
+                <div class="container">
+                    <p class="result__txt">Value Added Tax Amount</p>
+                    <p class="result__vatAmount"></p>
+                </div>
+                <div class="container">
+                    <p class="result__txt">Gross Amount</p>
+                    <p class="result__grossAmount"></p>
+                </div>
+            </section>
+        </section>
+    </main>
 
 
 

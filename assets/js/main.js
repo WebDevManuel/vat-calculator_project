@@ -3,21 +3,21 @@ function vatCalc() {
     let rate = parseFloat(document.querySelector("input[name=rate]:checked").value);
     let amount = parseFloat(document.querySelector("input[type=number]").value);
     let res;
-    console.log(calc, rate, amount);
+    // console.log(calc, rate, amount);
     switch (calc) {
         case "deduct":
             res = (amount / (1 + rate)).toFixed(2);
-            semiRes = (amount-res).toFixed(2);
-            document.querySelector(".result__vatAmount").innerHTML = semiRes.concat(" €");
-            document.querySelector(".result__grossAmount").innerHTML = res.concat(" €");
+            semiRes = (amount - res).toFixed(2);
+            document.querySelector(".result__vatAmount").innerHTML = semiRes.concat(" €uro");
+            document.querySelector(".result__grossAmount").innerHTML = res.concat(" €uro");
             break;
 
         default:
             semiRes = (rate * amount).toFixed(2);
             res = ((1 + rate) * amount).toFixed(2);
-            document.querySelector(".result__vatAmount").innerHTML = semiRes.concat(" €");
-            document.querySelector(".result__grossAmount").innerHTML = res.concat(" €");
+            document.querySelector(".result__vatAmount").innerHTML = semiRes.concat(" €uro");
+            document.querySelector(".result__grossAmount").innerHTML = res.concat(" €uro");
             break;
     }
-    console.log(res, semiRes);
+    // console.log(res, semiRes);
 }

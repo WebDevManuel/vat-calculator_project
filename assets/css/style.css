@@ -7,30 +7,94 @@
   box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: ubuntu;
-    src: url();
-} */
-/* :root {
-    --main-font: ubuntu;
-    --main-font-color: #957554;
-    --main-font-color_light: #fff;
-    --background-color: #DFAA5B;
-} */
-/* body {
-    max-width: 992px;
-    margin: 0 auto;
-} */
+@font-face {
+  font-family: "jakarta";
+  src: url("/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
+}
 /*######################################
                 HEADER
 ######################################*/
-header {
-  color: var(--main-font-color);
+h1 {
+  color: #2595FF;
+  font-size: 2em;
+  padding: 2vh 0;
+  text-align: center;
+}
+
+h3 {
+  color: #2595FF;
+  margin: 0 10px;
+}
+
+span {
+  color: orangered;
 }
 
 /*######################################
                 MAIN
 ######################################*/
+body {
+  color: #fff;
+  font-family: "jakarta";
+  background-color: #2D2D2D;
+}
+body main .calculator {
+  width: 450px;
+  margin: 15vh auto;
+  border: 1px solid #4A545C;
+  border-radius: 7px;
+  box-shadow: 0px 0px 16px 2px #000000;
+  padding: 0 10px;
+}
+body main .container {
+  background-color: #383838;
+  margin: 0 0 2vh;
+  padding: 10px 10px;
+  border: 1px solid #4A545C;
+  border-radius: 7px;
+}
+body main .container label[for=nonFood] {
+  padding: 0 5px 0 0;
+}
+body main .container:nth-of-type(3) {
+  margin: 0;
+}
+body main input {
+  background-color: #383838;
+  border: none;
+  font-family: "jakarta";
+  font-size: 1em;
+  color: #fff;
+  border-bottom: 2px solid #246DD3;
+}
+body main input:focus {
+  outline: none;
+}
+body main input::-webkit-outer-spin-button,
+body main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body main button {
+  width: 100%;
+  padding: 5px 0;
+  margin: 1vh 0 0;
+  background-color: #246DD3;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 1em;
+  font-family: "jakarta";
+  font-weight: 600;
+}
+body main button:hover {
+  background-color: #2595FF;
+  transition: background-color 0.2s ease-in-out 100ms;
+}
+body main .result {
+  padding: 4vh 0 0;
+}
+
 /*######################################
                 FOOTER
 ######################################*/
