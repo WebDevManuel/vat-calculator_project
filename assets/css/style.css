@@ -56,23 +56,24 @@ body main .container {
 body main .container label[for=nonFood] {
   padding: 0 5px 0 0;
 }
-body main .container:nth-of-type(3) {
-  margin: 0;
-}
-body main input {
+body main .container input[type=number] {
   background-color: #383838;
   border: none;
   font-family: "jakarta";
   font-size: 1em;
   color: #fff;
   border-bottom: 2px solid #246DD3;
+  width: 54%;
 }
-body main input:focus {
+body main .container input[type=number]:focus {
   outline: none;
 }
-body main input::-webkit-outer-spin-button,
-body main input::-webkit-inner-spin-button {
+body main .container input[type=number]::-webkit-outer-spin-button,
+body main .container input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  margin: 0;
+}
+body main .container:nth-of-type(3) {
   margin: 0;
 }
 body main button {
@@ -87,16 +88,12 @@ body main button {
   font-family: "jakarta";
   font-weight: 600;
 }
-body main button:hover {
+body main button button:hover {
   background-color: #2595FF;
   transition: background-color 0.2s ease-in-out 100ms;
 }
 body main .result {
   padding: 4vh 0 0;
 }
-
-/*######################################
-                FOOTER
-######################################*/
 
 /*# sourceMappingURL=style.css.map */

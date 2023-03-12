@@ -14,36 +14,29 @@
     <main>
         <section class="calculator">
             <h1>Value Added Tax Calculator</h1>
-            <form action="" onclick="return false">
-                <div class="container">
-                    <h2>What Should Be Calculated?</h2>
-                    <div>
-                        <input type="radio" name="calc" id="net2gross" value="add">
-                        <label for="net2gross">Add Value Added Tax (Net to gross)</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="calc" id="gross2net" value="deduct" checked>
-                        <label for="gross2net">Deduct Value Added Tax (Gross to Net)</label>
-                    </div>
+            <div class="container">
+                <h2>What Should Be Calculated?</h2>
+                <div>
+                    <input type="radio" name="calc" id="net2gross" value="add" onchange="add()" checked>
+                    <label for="net2gross">Add Value Added Tax (Net to gross)</label>
                 </div>
-
-                <div class="container">
-                    <h2>Value Added Tax Rate</h2>
-                    <input type="radio" name="rate" id="nonFood" value="0.19" checked>
-                    <label for="nonFood">19%</label>
-                    <input type="radio" name="rate" id="food" value="0.07">
-                    <label for="food">7%</label>
+                <div>
+                    <input type="radio" name="calc" id="gross2net" value="deduct" onchange="deduct()">
+                    <label for="gross2net">Deduct Value Added Tax (Gross to Net)</label>
                 </div>
-
-                <div class="container">
-                    <h2>Net Amount In Euro<span>*</span></h2>
-                    <input type="number" placeholder="Type here" required>
-                </div>
-                <button onclick="vatCalc()">CALCULATE</button>
-
-            </form>
-
+            </div>
+            <div class="container">
+                <h2>Value Added Tax Rate</h2>
+                <input type="radio" name="rate" id="nonFood" value="0.19" checked>
+                <label for="nonFood">19%</label>
+                <input type="radio" name="rate" id="food" value="0.07">
+                <label for="food">7%</label>
+            </div>
+            <div class="container">
+                <h2 class="netOrGrossTxt">Net Amount In Euro<span>*</span></h2>
+                <input type="number" placeholder="Type here" step="0.01" required>
+            </div>
+            <button onclick="vatCalc()">CALCULATE</button>
             <section>
                 <h3 class="result">Result</h3>
                 <div class="container">
@@ -51,17 +44,12 @@
                     <p class="result__vatAmount"></p>
                 </div>
                 <div class="container">
-                    <p class="result__txt">Gross Amount</p>
+                    <p class="result__txt result__netOrGross">Gross Amount</p>
                     <p class="result__grossAmount"></p>
                 </div>
             </section>
         </section>
     </main>
-
-
-
-
-
     <script src="./assets/js/main.js"></script>
 </body>
 

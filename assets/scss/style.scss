@@ -69,28 +69,29 @@ body {
             label[for=nonFood] {
                 padding: 0 5px 0 0;
             }
+
+            input[type=number] {
+                background-color: $container-background-color;
+                border: none;
+                font-family: $main-font;
+                font-size: $main-font--size;
+                color: $main-font-color--dark;
+                border-bottom: 2px solid #246DD3;
+                width: 54%;
+            }
+
+            input[type=number]:focus {
+                outline: none;
+            }
+
+            input[type=number]::-webkit-outer-spin-button,
+            input[type=number]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         }
 
         .container:nth-of-type(3) {
-            margin: 0;
-        }
-
-        input {
-            background-color: $container-background-color;
-            border: none;
-            font-family: $main-font;
-            font-size: $main-font--size;
-            color: $main-font-color--dark;
-            border-bottom: 2px solid #246DD3;
-        }
-
-        input:focus {
-            outline: none;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
             margin: 0;
         }
 
@@ -105,11 +106,12 @@ body {
             font-size: $main-font--size;
             font-family: $main-font;
             font-weight: 600;
-        }
 
-        button:hover {
-            background-color: $hl-font-color--dark;
-            transition: background-color 0.2s ease-in-out 100ms
+
+            button:hover {
+                background-color: $hl-font-color--dark;
+                transition: background-color 0.2s ease-in-out 100ms
+            }
         }
 
         .result {
@@ -117,7 +119,3 @@ body {
         }
     }
 }
-
-/*######################################
-                FOOTER
-######################################*/
