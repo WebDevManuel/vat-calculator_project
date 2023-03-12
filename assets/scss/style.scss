@@ -10,8 +10,9 @@
 
 @font-face {
     font-family: 'jakarta';
-    src: url('/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf');
+    src: url('../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf');
 }
+
 // variables
 $main-font: 'jakarta';
 $main-font--size: 1em;
@@ -20,6 +21,7 @@ $hl-font-color--dark: #2595FF;
 $main-font-color--dark: #fff;
 $container-background-color: #383838;
 $border--color: #4A545C;
+
 /*######################################
                 HEADER
 ######################################*/
@@ -32,7 +34,7 @@ h1 {
 
 h3 {
     color: $hl-font-color--dark;
-    margin: 0 10px ;
+    margin: 0 10px;
 }
 
 span {
@@ -115,6 +117,7 @@ body {
         }
     }
 }
+
 /*######################################
                 FOOTER
 ######################################*/
